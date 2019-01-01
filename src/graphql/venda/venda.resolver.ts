@@ -4,9 +4,7 @@ export default {
 
   Mutation: {
 
-    createVenda: async (_, {venda}: {venda: Venda}, {token}) => {
-
-      console.log(token);
+    createVenda: async (_, { venda }: { venda: Venda }, { token }) => {
 
       const novaVenda = await Venda.create({
         status_pagamento: venda.status_pagamento,
@@ -18,10 +16,8 @@ export default {
       })
         .save();
 
-      return {...novaVenda, vendedor: {id: 1, name: "George", password: "12345"}};
+      return { ...novaVenda, vendedor: { id: 1, name: "George", password: "12345" } };
 
-      // const result = await Venda.save(novaVenda);
-      // return result;
     }
 
   }
