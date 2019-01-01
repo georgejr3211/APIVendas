@@ -1,0 +1,3 @@
+export default {
+  SECRET: '888DS8991-392DSAIODASJIOQ32180DO'
+}

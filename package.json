@@ -1,0 +1,37 @@
+{
+  "name": "api-vendas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/server.js",
+  "scripts": {
+    "start": "./dist/server.js",
+    "start:build": "tsc",
+    "start:dev": "nodemon --exec ts-node ./src/server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.16.4",
+    "express-graphql": "^0.7.1",
+    "graphql": "^14.0.2",
+    "graphql-tools": "^4.0.3",
+    "jsonwebtoken": "^8.4.0",
+    "merge-graphql-schemas": "^1.5.8",
+    "mysql": "^2.16.0",
+    "reflect-metadata": "^0.1.12",
+    "ts-node": "^7.0.1",
+    "typeorm": "^0.2.9",
+    "typescript": "^3.2.2"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/express": "^4.16.0",
+    "@types/express-graphql": "^0.6.2",
+    "@types/graphql": "^14.0.4",
+    "@types/jsonwebtoken": "^8.3.0",
+    "@types/node": "^10.12.18",
+    "nodemon": "^1.18.9"
+  }
+}
