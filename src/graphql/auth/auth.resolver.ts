@@ -7,6 +7,7 @@ export default {
 
     generateToken: (_, { user }, context) => {
       const payload = {
+        id: 1,
         name: user.nome,
         password: user.password
       }
