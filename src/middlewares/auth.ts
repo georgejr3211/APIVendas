@@ -7,21 +7,20 @@ export function authMiddleware() {
 
     const token: string = req.get('x-access-token') || undefined;
 
-    if (!token) return next();
+    req['context'] = {}
+    req['context']['token'] = null;
+
+    if (token === undefined || !token) return next();
 
     const tokenVerify = jwt.verify(token, keys.SECRET, (err, decoded) => {
       if (err) {
-        console.log('erro na autenticação');
         return next();
       }
-
-      // verificar no banco se o usuario existe
 
       return decoded;
 
     });
 
-    req['context'] = {}
     req['context']['token'] = tokenVerify;
 
     return next();

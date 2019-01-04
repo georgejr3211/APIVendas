@@ -11,6 +11,7 @@ export class AuthDirective extends SchemaDirectiveVisitor {
 
       const [, , auth] = args;
 
+
       const token = auth.token;
 
       if (!token || !(Object.keys(token).length)) {

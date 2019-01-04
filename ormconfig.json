@@ -7,5 +7,5 @@
   "password": "",
   "synchronize": true,
   "entities": ["src/models/**/*.model.*"],
-  "logging": true
+  "logging": false
 }
